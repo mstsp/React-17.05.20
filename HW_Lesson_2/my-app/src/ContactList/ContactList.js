@@ -11,12 +11,14 @@ class ContactList extends Component {
             {id: 4, firstName: 'firstName4', lastName: 'lastName4', phone: '456415464'},
         ]
     }
-
+    addNewContact(newContact) {
+        console.log(newContact)
+    }
     render() {
         return (
             <>
                 <ContactListTable contacts={this.state.contacts}></ContactListTable>
-                <ContactListForm></ContactListForm>
+                <ContactListForm onSubmit={this.addNewContact}></ContactListForm>
             </>
         );
     }
