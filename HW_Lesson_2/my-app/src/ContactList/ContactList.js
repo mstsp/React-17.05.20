@@ -11,8 +11,15 @@ class ContactList extends Component {
             {id: 4, firstName: 'firstName4', lastName: 'lastName4', phone: '456415464'},
         ]
     }
-    addNewContact(newContact) {
-        console.log(newContact)
+    addNewContact = (newContact) => {
+        newContact.id = Date.now()
+        newContact.show = false
+        console.log('new', newContact)
+        this.setState(
+            {
+                contacts: [...this.state.contacts, newContact]
+            }
+        )
     }
     render() {
         return (

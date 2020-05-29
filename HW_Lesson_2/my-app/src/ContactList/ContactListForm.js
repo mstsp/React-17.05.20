@@ -2,23 +2,27 @@ import React, {Component} from 'react';
 
 class ContactListForm extends Component {
     state = {
-        firstName: '',
-        lastName: '',
-        phoneNumber: ''
+        newContact: {
+            firstName: '',
+            lastName: '',
+            phoneNumber: ''
+        }
     }
     onFormSubmit = (e) => {
         e.preventDefault()
         console.log('submited', e)
-        this.props.onSubmit()
+        this.props.onSubmit({...this.state.newContact})
+        this.resetForm()
 
     }
-    resetForm = (e) => {
-        e.preventDefault()
+    resetForm = () => {
         console.log('clear form')
         this.setState({
-            firstName: '',
-            lastName: '',
-            phoneNumber: ''
+            newContact: {
+                firstName: '',
+                lastName: '',
+                phoneNumber: ''
+            }
         });
 
     }
@@ -28,10 +32,12 @@ class ContactListForm extends Component {
         const target = e.target;
         const value = target.value;
         const name = target.name;
-
         this.setState({
-            [name]: value
-        });
+            newContact: {
+            ...this.state.newContact,
+                [name]: value
+            }
+        })
     }
 
     render() {
