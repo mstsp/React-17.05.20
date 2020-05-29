@@ -24,7 +24,6 @@ class ContactListForm extends Component {
                 phoneNumber: ''
             }
         });
-
     }
 
     onInputChange = (e) => {
@@ -46,7 +45,7 @@ class ContactListForm extends Component {
                 <input type="text" name="firstName" value={this.state.firstName} onChange={this.onInputChange} placeholder={'Enter first name'}/>
                 <input type="text" name="lastName" value={this.state.lastName} onChange={this.onInputChange} placeholder={'Enter last name'}/>
                 <input type="text" name="phoneNumber" value={this.state.phoneNumber} onChange={this.onInputChange} placeholder={'Enter phone number'}/>
-                <button onClick={this.resetForm}>Отмена</button>
+                {/*<button onClick={this.resetForm}></button>*/}
                 <button onClick={this.onFormSubmit}>Сохранить</button>
             </form>
         );
