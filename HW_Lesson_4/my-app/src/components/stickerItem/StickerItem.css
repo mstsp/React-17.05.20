@@ -1,0 +1,23 @@
+.sticker {
+    height: 200px;
+    width: 200px;
+    background-color: antiquewhite;
+    border-radius: 4px;
+    padding: 10px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.sticker-header-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sticker-textarea {
+    height: 90%;
+    width: 180px;
+    resize: none;
+    border-radius: 4px;
+}

@@ -12,9 +12,13 @@ html, body {
   margin: auto;
 }
 
-.header {
+header {
   line-height: 50px;
   font-size: 28px;
+  width: 100%;
+  background-color: #555555;
+  color: white;
+  text-align: center;
 }
 
 .content {
