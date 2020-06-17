@@ -1,12 +1,10 @@
 import React from 'react';
-import StickersField from "./components/stickersField/StickersField";
-import './App.css';
+import Stickers from "./components/stickers/Stickers";
 
 function App(props) {
     return (
         <div>
-            <header>Stickers App</header>
-            <StickersField></StickersField>
+            <Stickers></Stickers>
         </div>
     );
 }
